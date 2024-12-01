@@ -1,0 +1,35 @@
+.project {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-bottom: 30px;
+    background-color: #292929;
+    border-radius: 15px;
+}
+.project img {
+    border-radius: 15px;
+}
+.project-desc {
+    padding-top: 10px;
+}
+.proj-title {
+    font-size: 36px;
+}
+.links a{
+    text-decoration: none;
+}
+.links img {
+    margin-right: 10px;
+}
+.showcase-img {
+    width: 400px;
+    height: 320px;
+}
+.tools {
+    color: #a4a4a4;
+}
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
