@@ -5,11 +5,17 @@ body {
 a{
     color: #3498db;
 }
+a:hover, a:active {
+    color: #2977ab;
+}
 p, h1, h2, h3, h4, h5, h6, span{
     color: #e0e0e0;
 }
 li{
     color: #e0e0e0;
+}
+.text-sub {
+    color: #a4a4a4;
 }
 .page-nav {
     display: flex;
@@ -32,7 +38,7 @@ li{
 .page-content {
     padding: 0;
     min-height: 1000px; 
-    max-width: 1100px; 
+    max-width: 1200px; 
     width: 90%;
     color: #fff;
     margin-left: auto;

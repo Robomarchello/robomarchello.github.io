@@ -2,3 +2,6 @@
     text-align: left;
     font-size: 24px;
 }
+.links a{
+    text-decoration: none;
+}

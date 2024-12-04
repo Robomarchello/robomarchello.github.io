@@ -25,9 +25,6 @@
     width: 400px;
     height: 320px;
 }
-.tools {
-    color: #a4a4a4;
-}
 .projects-container {
     display: flex;
     flex-direction: column;
