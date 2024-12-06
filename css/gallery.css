@@ -1,11 +1,11 @@
 .showcase {
     background-color: #292929;
-    max-width: 400px;
+    max-width: 380px;
     border: 10px #292929 solid;
     border-radius: 15px
 }
 .showcase-img {
-    max-width: 400px;
+    max-width: 380px;
     border-radius: 15px;
 }
 .showcase-title {
@@ -14,9 +14,10 @@
 .showcase-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 40px;
     justify-content: center;
 }
 .page-content {
     max-width: 1400px; 
+    min-width: 400px; 
 }
