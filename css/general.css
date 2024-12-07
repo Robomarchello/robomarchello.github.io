@@ -6,7 +6,7 @@ a{
     color: #3498db;
 }
 a:hover, a:active {
-    color: #2977ab;
+    color: #5dade2;
 }
 p, h1, h2, h3, h4, h5, h6, span{
     color: #e0e0e0;
@@ -26,6 +26,23 @@ li{
     padding-left: 30px;
     padding-right: 30px;
   }
+.title-name {
+    font-size: 32px;
+    color: #e0e0e0;
+}
+.navigation-links {
+    display: flex;
+    flex-direction: row;
+}
+.navigation-links a {
+    text-decoration: none;
+    padding: 30px 20px 30px 20px;
+    margin: 0;
+    height: 100%;
+}
+.navigation-links a:hover, a:active {
+    background-color: #444444;
+}
 .page-title{
     text-align: center;
     font-size: 48px;
