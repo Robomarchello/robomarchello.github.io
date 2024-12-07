@@ -11,6 +11,9 @@ a:hover, a:active {
 p, h1, h2, h3, h4, h5, h6, span{
     color: #e0e0e0;
 }
+p {
+    font-size: 18px;
+}
 li{
     color: #e0e0e0;
 }
