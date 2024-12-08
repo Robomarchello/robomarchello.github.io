@@ -26,9 +26,17 @@
 .links img {
     margin-right: 10px;
 }
+.showcase-div {
+    min-width: 400px;
+    min-height: 320px;
+    overflow: hidden;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
 .showcase-img {
-    width: 400px;
-    height: 320px;
+    object-fit: cover;
+    height: 100%;
 }
 .projects-container {
     display: flex;
