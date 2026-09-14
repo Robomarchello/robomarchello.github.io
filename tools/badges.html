@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Badges · Admin Tools</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/tools/tools.css" />
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="topbar-brand">Robo<span>Tools</span></div>
+      <nav>
+        <a href="/tools/">Overview</a>
+        <a href="/tools/projects.html">Projects</a>
+        <a href="/tools/badges.html" class="active">Badges</a>
+        <a href="/tools/links.html">Links</a>
+        <a href="/tools/posts.html">Posts</a>
+      </nav>
+      <div class="topbar-actions">
+        <span id="dirty-indicator"></span>
+        <button type="button" id="save-btn">Save changes</button>
+        <button type="button" id="build-btn" class="primary">Build site</button>
+      </div>
+    </div>
+
+    <div class="layout">
+      <div class="panel sticky">
+        <div class="panel-head">
+          <span class="panel-title">Badge</span>
+          <button type="button" id="add-badge-btn" class="small">+ New</button>
+        </div>
+        <div class="panel-body" id="editor"></div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <span class="panel-title">Catalogue</span>
+          <div style="display: flex; gap: 0.5rem; align-items: center;">
+            <select id="category-filter" style="width: auto;"></select>
+            <input type="search" id="badge-search" placeholder="Search…" style="width: 180px;" />
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="badge-grid" id="badge-grid"></div>
+        </div>
+      </div>
+    </div>
+
+    <input type="file" id="icon-input" accept="image/*" />
+    <script type="module" src="/tools/js/badges.js"></script>
+  </body>
+</html>

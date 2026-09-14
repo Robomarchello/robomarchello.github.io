@@ -1,0 +1,20 @@
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ pageTitle }}</title>
+    <meta name="description" content="{{ pageDescription }}" />
+    <meta property="og:title" content="{{ pageTitle }}" />
+    <meta property="og:description" content="{{ pageDescription }}" />
+    <meta property="og:type" content="{{ ogType }}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }} - Posts RSS Feed" href="{{ rssUrl }}" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="{{ fontsUrl }}" rel="stylesheet" />
+
+    <!-- Applies the saved palette before first paint to avoid a flash -->
+    {{{ themeBootstrap }}}
+
+    <link rel="stylesheet" href="{{ generalCss }}" />
+    <link rel="stylesheet" href="{{ pageCss }}" />
+{{{ extraStyles }}}

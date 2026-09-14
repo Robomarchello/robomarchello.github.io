@@ -1,0 +1,19 @@
+{
+  "title": "RoboMarchello",
+  "author": "Mark (RoboMarchello)",
+  "url": "https://robomarchello.dev",
+  "description": "Personal developer portfolio of Mark (RoboMarchello), a freshman at LUT passionate about game development, physics simulations, and clean code.",
+  "blogDescription": "Personal blog of Mark (RoboMarchello). Deep dives into game physics, software architecture, hardware builds, and clean code.",
+  "copyright": "© Robomarchello 2026. All Rights Reserved.",
+  "nav": [
+    { "label": "home", "href": "/" },
+    { "label": "projects", "href": "/projects.html" },
+    { "label": "links", "href": "/links.html" },
+    { "label": "posts", "href": "/posts.html" }
+  ],
+  "socials": [
+    { "label": "GitHub", "href": "https://github.com/robomarchello", "icon": "github" },
+    { "label": "YouTube", "href": "https://youtube.com/@robomarchello", "icon": "youtube" },
+    { "label": "Discord", "href": "https://discordapp.com/users/412231472968237066", "icon": "discord" }
+  ]
+}

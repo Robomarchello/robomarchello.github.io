@@ -1,0 +1,42 @@
+{
+  "python": {
+    "name": "Python",
+    "category": "Languages",
+    "svg": "<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26v2.9H13.9v-.93l-.04-.46-.14-.38-.24-.31-.33-.23-.45-.15-.56-.07h-3.3l-.56.07-.45.15-.33.23-.24.31-.14.38-.04.46v1.87h6.63l.46.04.38.14.31.24.23.33.15.45.07.56v3.3l-.07.56-.15.45-.23.33-.31.24-.38.14-.46.04H8.78l-.9-.2-.73-.26-.59-.3-.45-.32-.34-.34-.25-.34-.16-.33-.1-.3-.04-.26V9.06h3.86v.93l.04.46.14.38.24.31.33.23.45.15.56.07h3.3l.56-.07.45-.15.33-.23.24-.31.14-.38.04-.46V7.47H6.98l-.46-.04-.38-.14-.31-.24-.23-.33-.15-.45-.07-.56V2.71l.07-.56.15-.45.23-.33.31-.24.38-.14.46-.04zM10.08 1.95a.78.78 0 1 0 0 1.56.78.78 0 0 0 0-1.56zm3.84 8.7a.78.78 0 1 0 0 1.56.78.78 0 0 0 0-1.56z\"/></svg>"
+  },
+  "cpp": {
+    "name": "C / C++",
+    "category": "Languages",
+    "svg": "<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14c-2.21 0-4-1.79-4-4s1.79-4 4-4c1.15 0 2.18.49 2.91 1.26l-1.42 1.42C11.08 10.3 10.58 10 10 10c-1.1 0-2 .9-2 2s.9 2 2 2c.58 0 1.08-.3 1.49-.68l1.42 1.42C12.18 15.51 11.15 16 10 16zm6-3h-1v1h-1v-1h-1v-1h1v-1h1v1h1v1zm3 0h-1v1h-1v-1h-1v-1h1v-1h1v1h1v1z\"/></svg>"
+  },
+  "pygame": {
+    "name": "Pygame",
+    "category": "Game & Simulation",
+    "svg": "<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M18 4H6C3.79 4 2 5.79 2 8v8c0 2.21 1.79 4 4 4h12c2.21 0 4-1.79 4-4V8c0-2.21-1.79-4-4-4zm-8 8H8v2H6v-2H4v-2h2V8h2v2h2v2zm6 2a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm2-3a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z\"/></svg>"
+  },
+  "opengl": {
+    "name": "OpenGL",
+    "category": "Graphics & Math",
+    "svg": "<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M12 2L2 7l10 5 10-5-10-5zm-8 7.3L12 14.3l8-5v5.4l-8 5-8-5V9.3z\"/></svg>"
+  },
+  "git": {
+    "name": "Git",
+    "category": "Systems & Infrastructure",
+    "svg": "<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M21.6 10.7l-8.3-8.3a2 2 0 0 0-2.8 0L2.4 10.7a2 2 0 0 0 0 2.8l8.3 8.3a2 2 0 0 0 2.8 0l8.1-8.1a2 2 0 0 0 0-2.8zM12 16.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z\"/></svg>"
+  },
+  "raspberrypi": {
+    "name": "Raspberry Pi ",
+    "category": "Hardware & Embedded",
+    "icon": "/assets/icons/raspberrypi.png"
+  },
+  "onshape": {
+    "name": "Onshape (CAD)",
+    "category": "Custom",
+    "icon": "/assets/icons/onshape.png"
+  },
+  "micropython": {
+    "name": "MicroPython",
+    "category": "Custom",
+    "icon": "/assets/icons/micropython.png"
+  }
+}

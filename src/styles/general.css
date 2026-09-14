@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap');
+
+/* ==========================================================================
+   Design Tokens & CSS Custom Properties
+   ========================================================================== */
+:root {
+  --bg-color: #E0F2FE;         
+  --card-bg: #FFFFFF;          
+  --text-main: #0F172A;        
+  --text-muted: #475569;       
+  --accent-color: #0284C7;     
+  --accent-hover: #0369A1;     
+  --border-color: rgba(0, 0, 0, 0.08);
+  --font-family: 'Salvatore', 'Plus Jakarta Sans', -apple-system, sans-serif;
+}
+
+/* ==========================================================================
+   Global Reset & Base Transitions
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Disable transitions during initial page render to prevent white-to-color transition flash on load */
+html.is-loading,
+html.is-loading * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+
+/* ==========================================================================
+   Base Layout & Document Setup
+   ========================================================================== */
+html {
+  background-color: var(--bg-color);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: var(--font-family);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 1.5rem;
+  overflow-x: hidden;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 0 0.9rem;
+  }
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+}
+
+/* ==========================================================================
+   Shared Card Component Styles
+   ========================================================================== */
+.fact-card,
+.project-card {
+  position: relative;
+  overflow: hidden;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
+  outline: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+}
+
+/* 45-Degree Diagonal One-Way Shine Beam */
+.fact-card::after,
+.project-card::after {
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  background: linear-gradient(
+    135deg,
+    transparent 43%,
+    rgba(255, 255, 255, 0.55) 50%,
+    transparent 57%
+  );
+  pointer-events: none;
+  z-index: 5;
+  opacity: 0;
+}
+
+@keyframes diagonalShine {
+  0% {
+    transform: translate(-40%, -40%);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(40%, 40%);
+    opacity: 0;
+  }
+}
+
+.fact-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  outline: none;
+}
+
+.project-card:hover {
+  transform: scale(1.008);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.07);
+  outline: none;
+}
+
+.fact-card:hover::after,
+.project-card:hover::after {
+  animation: diagonalShine 0.75s ease-in-out forwards;
+}
+
+/* ==========================================================================
+   Button Components
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--accent-color);
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 0.85rem 1.8rem;
+  border-radius: 999px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.3);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.btn:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+.btn-secondary {
+  background-color: var(--card-bg);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.3);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--text-main);
+  color: var(--card-bg);
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* ==========================================================================
+   Accessibility Utilities
+   ========================================================================== */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  background: var(--text-main);
+  color: var(--card-bg);
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-weight: 700;
+  z-index: 999;
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* ==========================================================================
+   Developer Mode Floating Tools Button (active when ?dev=true)
+   ========================================================================== */
+.dev-tools-fab {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  z-index: 9999;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--card-bg);
+  color: var(--text-main);
+  border: 1.5px solid var(--text-main);
+  border-radius: 9999px;
+  padding: 0.5rem 1rem;
+  font-family: var(--font-family);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+  backdrop-filter: blur(8px);
+}
+
+.dev-tools-fab:hover {
+  background-color: var(--text-main);
+  color: var(--card-bg);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18), 0 3px 6px rgba(0, 0, 0, 0.12);
+}
+
+.dev-tools-fab svg {
+  width: 15px;
+  height: 15px;
+  stroke: currentColor;
+  flex-shrink: 0;
+}
+
+.dev-tools-fab .dev-badge {
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: rgba(0, 0, 0, 0.08);
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+}
+
+.dev-tools-fab:hover .dev-badge {
+  background: rgba(255, 255, 255, 0.2);
+}
+

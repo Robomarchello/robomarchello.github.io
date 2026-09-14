@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Posts · Admin Tools</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/tools/tools.css" />
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="topbar-brand">Robo<span>Tools</span></div>
+      <nav>
+        <a href="/tools/">Overview</a>
+        <a href="/tools/projects.html">Projects</a>
+        <a href="/tools/badges.html">Badges</a>
+        <a href="/tools/links.html">Links</a>
+        <a href="/tools/posts.html" class="active">Posts</a>
+      </nav>
+      <div class="topbar-actions">
+        <span id="dirty-indicator"></span>
+        <button type="button" id="save-btn">Save changes</button>
+        <button type="button" id="build-btn" class="primary">Build site</button>
+      </div>
+    </div>
+
+    <div class="layout">
+      <div class="panel sticky">
+        <div class="panel-head">
+          <span class="panel-title">Posts</span>
+          <button type="button" id="add-post-btn" class="small">+ New</button>
+        </div>
+        <div class="panel-body flush">
+          <div class="item-list" id="post-list"></div>
+        </div>
+        <div class="panel-head" style="border-top: 1px solid var(--t-border); border-bottom: 0;">
+          <span class="panel-title">Front matter</span>
+        </div>
+        <div class="panel-body" id="frontmatter"></div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <span class="panel-title" id="editor-title">Markdown</span>
+          <div style="display: flex; gap: 0.4rem; align-items: center;">
+            <button type="button" id="insert-image-btn" class="small">Insert image…</button>
+            <button type="button" id="delete-post-btn" class="small danger">Delete</button>
+          </div>
+        </div>
+        <div class="panel-body flush">
+          <div class="editor-split">
+            <textarea id="markdown-input" spellcheck="false" placeholder="Write your post in Markdown…"></textarea>
+            <div id="markdown-preview"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <input type="file" id="asset-input" accept="image/*" />
+    <script type="module" src="/tools/js/posts.js"></script>
+  </body>
+</html>

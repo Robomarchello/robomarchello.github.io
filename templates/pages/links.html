@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en" class="is-loading">
+  <head>
+{{> head }}
+  </head>
+  <body>
+{{> header }}
+
+    <main class="container" id="links-page">
+      <section class="hero links-hero" id="links-hero-section">
+        <h1 class="links-title" id="links-page-title">Links</h1>
+        <p class="bio links-subheading">A directory of my <span class="highlight">social profiles</span>, <span class="highlight">experiments</span>, and ways to <span class="highlight">get in touch</span>.</p>
+      </section>
+
+{{{ linkSections }}}
+    </main>
+
+{{> footer }}
+
+    <script type="module" src="{{ scriptUrl }}"></script>
+  </body>
+</html>

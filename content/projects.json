@@ -1,0 +1,29 @@
+[
+  {
+    "id": "project-pixelsketch",
+    "title": "PixelSketch",
+    "media": {
+      "src": "/assets/projects/pixelsketch.webp",
+      "alt": "PixelSketch - Mechanical Drawing Toy Preview"
+    },
+    "tools": [
+      "raspberrypi",
+      "onshape",
+      "micropython"
+    ],
+    "description": "Digital recreation of a classic mechanical drawing toy. First time experimenting with hardware. From the case to the wiring and code, every part was built by me.",
+    "links": [
+      {
+        "label": "See source code",
+        "url": "https://github.com/Robomarchello/PixelSketch",
+        "type": "github"
+      },
+      {
+        "label": "Watch YouTube video",
+        "url": "https://youtu.be/IhqKNODgfBE",
+        "type": "youtube"
+      }
+    ],
+    "featured": true
+  }
+]

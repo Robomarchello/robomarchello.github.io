@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" class="is-loading">
+  <head>
+{{> head }}
+  </head>
+  <body class="posts-page">
+{{> header }}
+
+    <main class="posts-container" id="posts-container">
+      <section class="posts-header" id="posts-header" aria-label="Blog Header">
+        <h1 class="posts-page-title" id="posts-main-title">Posts</h1>
+
+        <div class="posts-bio" id="posts-bio">
+          <p>
+            Welcome to my blog!
+            This is my space for sharing <span class="highlight">ideas</span>, <span class="highlight">news about my projects</span>,
+            <span class="highlight">updates from life</span>, and possibly <span class="highlight">tutorials</span>. 
+            Feel free to read any post you like and I hope you find something interesting.
+          </p>
+        </div>
+      </section>
+
+      <section class="posts-browse-section" id="browse-section" aria-label="Browse and filter posts">
+        <div class="posts-browse-header-row">
+          <h2 class="posts-browse-subheading" id="browse-heading">Browse</h2>
+        </div>
+
+        <!-- Pills and cards are pre-baked; filtering is pure show/hide in the browser -->
+        <div class="tags-container" id="tags-container">
+          <div class="tags-row" id="tags-row" role="group" aria-label="Filter posts by tag">
+{{{ tagPills }}}
+          </div>
+          <button type="button" class="tags-overflow-toggle" id="tags-overflow-toggle" aria-expanded="false" style="display: none;">
+            <span class="toggle-text">Show more tags</span>
+            <svg class="toggle-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+        </div>
+
+        <div class="filter-status-strip" id="filter-status-strip" aria-live="polite">
+          <span id="filter-results-count" style="display: none;"></span>
+        </div>
+      </section>
+
+      <section class="posts-feed" id="posts-feed" aria-label="Articles Feed">
+{{{ postsFeed }}}
+      </section>
+
+      <div class="posts-empty-state" id="posts-empty-state" style="display: none;">
+        <h4 class="posts-empty-title">No posts found</h4>
+        <p class="posts-empty-desc">No posts available under "<span id="empty-tag-name"></span>".</p>
+        <button type="button" class="btn" id="empty-reset-btn" style="padding: 0.6rem 1.4rem; font-size: 0.9rem;">Show All Posts</button>
+      </div>
+    </main>
+
+{{> footer }}
+
+    <script type="module" src="{{ scriptUrl }}"></script>
+  </body>
+</html>

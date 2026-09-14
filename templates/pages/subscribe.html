@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" class="is-loading">
+  <head>
+{{> head }}
+  </head>
+  <body class="posts-page">
+{{> header }}
+
+    <main class="post-detail-container subscribe-container" id="subscribe-root">
+      <div class="post-detail-layout" style="justify-content: center;">
+        <div class="post-detail-main" style="max-width: 680px; width: 100%;">
+          <section class="posts-header" style="margin: 1.5rem auto 2.5rem; text-align: center;" aria-label="Subscribe Header">
+            <h1 class="posts-page-title" id="subscribe-title">Subscribe to Blog</h1>
+            <div class="posts-bio" id="subscribe-subheading">
+              <p>
+                Get notified whenever I publish posts!
+              </p>
+            </div>
+          </section>
+
+          <div class="subscribe-card" id="subscribe-card" style="text-align: center;">
+            <div style="display: inline-flex; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: 50%; background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.28); margin-bottom: 1.25rem; color: var(--posts-accent);">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 11a9 9 0 0 1 9 9"></path>
+                <path d="M4 4a16 16 0 0 1 16 16"></path>
+                <circle cx="5" cy="19" r="1"></circle>
+              </svg>
+            </div>
+
+            <h2 style="font-size: 1.45rem; font-weight: 700; color: #FFFFFF; margin: 0 0 0.65rem;">Email Newsletter Coming Soon</h2>
+            <p style="color: var(--posts-text-body); font-size: 1rem; line-height: 1.7; max-width: 520px; margin: 0 auto 1.75rem;">
+              Direct email delivery is currently in development. In the meantime, you can subscribe and receive instant post updates via the official <strong>RSS 2.0 Feed</strong> or follow on GitHub.
+            </p>
+
+            <div style="display: flex; align-items: center; justify-content: center; gap: 0.85rem; flex-wrap: wrap;">
+              <a href="{{ rssUrl }}" target="_blank" rel="noopener noreferrer" class="btn btn-subscribe" id="subscribe-rss-link">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.45rem;">
+                  <path d="M4 11a9 9 0 0 1 9 9"></path>
+                  <path d="M4 4a16 16 0 0 1 16 16"></path>
+                  <circle cx="5" cy="19" r="1"></circle>
+                </svg>
+                <span>Subscribe via RSS</span>
+              </a>
+
+              <button type="button" class="btn btn-secondary post-return-btn" id="copy-rss-btn" style="box-shadow: none;">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.4rem;" id="copy-icon">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span id="copy-rss-text">Copy Feed URL</span>
+              </button>
+
+              <a href="{{ postsUrl }}" class="btn btn-secondary post-return-btn" style="box-shadow: none;">
+                <span>Return to posts</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+{{> footer }}
+
+    <script type="module" src="{{ scriptUrl }}"></script>
+  </body>
+</html>

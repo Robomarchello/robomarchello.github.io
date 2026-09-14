@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en" class="is-loading">
+  <head>
+{{> head }}
+  </head>
+  <body>
+{{> header }}
+
+    <div class="container" id="home">
+      <section class="hero" id="hero-section">
+        <h1 id="hero-title" aria-label="RoboMarchello"><span class="char" style="--char-index: 0">R</span><span class="char" style="--char-index: 1">o</span><span class="char" style="--char-index: 2">b</span><span class="char" style="--char-index: 3">o</span><span class="char" style="--char-index: 4">M</span><span class="char" style="--char-index: 5">a</span><span class="char" style="--char-index: 6">r</span><span class="char" style="--char-index: 7">c</span><span class="char" style="--char-index: 8">h</span><span class="char" style="--char-index: 9">e</span><span class="char" style="--char-index: 10">l</span><span class="char" style="--char-index: 11">l</span><span class="char" style="--char-index: 12">o</span></h1>
+        <p class="bio">
+          
+          Hi there! My name is <strong>Mark</strong>, a freshman at TUL and a <span class="highlight">passionate programmer</span>.
+          I enjoy working on <span class="highlight">games</span>, <span class="highlight">physics simulations</span>, and various <span class="highlight">software and hardware</span> projects
+          Big fan of clean code and understanding how things work under the hood:)
+        </p>
+      </section>
+
+      <section id="facts-section">
+        <h2 class="section-title">A Few Facts</h2>
+        <div class="facts-grid" id="facts-grid">
+          <div class="fact-card" id="fact-university">
+            <span class="fact-label">Studying CS at</span>
+            <h3 class="fact-title">Politechnika Łódzka</h3>
+          </div>
+          <div class="fact-card" id="fact-python">
+            <span class="fact-label">Programming with Python for</span>
+            <h3 class="fact-title"><span id="python-days" data-since="2020-10-01">N</span> days</h3>
+          </div>
+          <div class="fact-card" id="fact-cpp">
+            <span class="fact-label">Currently learning</span>
+            <h3 class="fact-title">C++</h3>
+          </div>
+          <div class="fact-card" id="fact-scratch">
+            <span class="fact-label">Love building things</span>
+            <h3 class="fact-title">from scratch</h3>
+          </div>
+          <div class="fact-card" id="fact-infomatrix">
+            <span class="fact-label">INFOMATRIX International Competition 2025</span>
+            <h3 class="fact-title">silver medalist</h3>
+          </div>
+          <div class="fact-card" id="fact-thats-all">
+            <span class="fact-label">That's all</span>
+            <h3 class="fact-title">to be honest</h3>
+          </div>
+        </div>
+      </section>
+
+      <h2 class="section-title" id="projects-title">Featured Project</h2>
+      <div class="project-card" id="featured-project-card">
+{{{ featuredProject }}}
+      </div>
+
+      <div class="all-projects-cta" id="all-projects-cta">
+        <a href="{{ projectsUrl }}" class="btn btn-secondary" id="see-all-projects-btn">
+          <span>See all my projects</span>
+          <svg class="btn-arrow-svg" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+{{> footer }}
+
+    <script type="module" src="{{ scriptUrl }}"></script>
+  </body>
+</html>

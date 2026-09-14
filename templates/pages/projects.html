@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" class="is-loading">
+  <head>
+{{> head }}
+  </head>
+  <body>
+{{> header }}
+
+    <!-- Interactive physics playground behind the page title -->
+    <section class="projects-physics-section" id="projects-physics-section" aria-label="Interactive Physics Playground">
+      <div class="physics-stage" id="physics-stage">
+        <canvas id="physics-canvas" aria-label="Interactive physics simulation with gravity and bouncing rigidbodies"></canvas>
+        <h1 class="projects-page-title" id="projects-title"><span id="projects-title-text"><span class="title-segment" data-segment="P">P</span><span class="title-segment" data-segment="r">r</span><span class="title-segment" data-segment="o">o</span><span class="title-segment" data-segment="j">j</span><span class="title-segment" data-segment="e">e</span><span class="title-segment" data-segment="c">c</span><span class="title-segment" data-segment="t">t</span><span class="title-segment" data-segment="s">s</span></span></h1>
+        <script>
+          /* Centres the title against the stage before paint, so it never jumps. */
+          (function() {
+            var title = document.getElementById('projects-title');
+            if (!title) return;
+            if (window.innerWidth > 768) {
+              var header = document.getElementById('site-header');
+              var nav = document.querySelector('.nav-wrapper');
+              var stageHeight = 258;
+              var padTop = header ? (parseFloat(window.getComputedStyle(header).paddingTop) || 24) : 24;
+              var navHeight = nav ? nav.offsetHeight : 55;
+              title.style.top = (Math.round((stageHeight + padTop + navHeight) / 2) - 8) + 'px';
+            } else {
+              title.style.top = '50%';
+            }
+            title.style.transform = 'translate(-50%, -50%)';
+          })();
+        </script>
+        <div class="physics-controls-bar" id="physics-controls-bar">
+          <button type="button" class="physics-circle-btn" id="physics-toggle-btn" aria-label="Pause physics simulation" title="Toggle physics simulation">
+            <span class="circle-btn-icon" id="toggle-icon" aria-hidden="true">
+              <svg class="physics-btn-svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" stroke="none" aria-hidden="true">
+                <rect x="6" y="5" width="4" height="14" rx="1.5"></rect>
+                <rect x="14" y="5" width="4" height="14" rx="1.5"></rect>
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="container" id="projects-container">
+      <main class="projects-feed" id="projects-feed">
+{{{ projectsFeed }}}
+      </main>
+    </div>
+
+{{> footer }}
+
+    <script type="module" src="{{ scriptUrl }}"></script>
+  </body>
+</html>

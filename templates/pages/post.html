@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" class="is-loading">
+  <head>
+{{> head }}
+  </head>
+  <body class="posts-page"">
+{{> header }}
+
+    <div class="post-detail-wrapper" id="post-detail-root">
+      <article class="post-detail-container" id="post-article">
+        <a href="{{ postsUrl }}" class="back-to-posts-link">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          <span>Back to all posts</span>
+        </a>
+
+        <header class="post-detail-header">
+          <div class="post-tags-row">
+            {{{ tagChips }}}
+          </div>
+          <h1 class="post-detail-title">{{ post.title }}</h1>
+          <div class="post-meta-row">
+            <span class="post-date-text">{{ post.formattedDate }}</span>
+          </div>
+        </header>
+
+        <div class="post-detail-content">
+{{{ lead }}}
+{{{ post.contentHtml }}}
+        </div>
+
+        <div class="all-posts-cta" id="all-posts-cta">
+          <a href="{{ postsUrl }}" class="btn btn-secondary post-return-btn" id="return-to-posts-btn">
+            <svg class="btn-arrow-svg btn-arrow-left" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            <span>Return to all posts</span>
+          </a>
+          <a href="{{ subscribeUrl }}" class="btn-get-updated" id="btn-get-updated" title="Subscribe to blog updates">
+            <span class="btn-get-updated-inner">
+              <span>Get updated</span>
+            </span>
+          </a>
+        </div>
+      </article>
+    </div>
+
+{{> footer }}
+
+    <script type="module" src="{{ scriptUrl }}"></script>
+  </body>
+</html>

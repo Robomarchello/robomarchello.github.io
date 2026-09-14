@@ -1,0 +1,79 @@
+{
+  "sections": [
+    {
+      "id": "work-projects-section",
+      "title": "Check out my work/projects",
+      "links": [
+        {
+          "id": "link-github",
+          "title": "GitHub",
+          "url": "https://github.com/robomarchello",
+          "displayUrl": "github.com/robomarchello",
+          "target": "_blank",
+          "type": "standard"
+        },
+        {
+          "id": "link-youtube",
+          "title": "YouTube",
+          "url": "https://youtube.com/@robomarchello",
+          "displayUrl": "youtube.com/@robomarchello",
+          "target": "_blank",
+          "type": "standard"
+        },
+        {
+          "id": "link-itch",
+          "title": "itch.io",
+          "url": "https://robomarchello.itch.io",
+          "displayUrl": "robomarchello.itch.io",
+          "target": "_blank",
+          "type": "standard"
+        },
+        {
+          "id": "link-projects",
+          "title": "Projects",
+          "url": "/projects.html",
+          "displayUrl": "robomarchello.itch.io/projects.html",
+          "target": "_self",
+          "type": "standard"
+        }
+      ]
+    },
+    {
+      "id": "featured-section",
+      "title": "Featured",
+      "links": [
+        {
+          "id": "link-featured-video",
+          "title": "Recreating mechanical toy from 70s with rpi pico",
+          "url": "https://youtu.be/IhqKNODgfBE",
+          "displayUrl": "https://youtu.be/IhqKNODgfBE",
+          "target": "_blank",
+          "type": "standard"
+        }
+      ]
+    },
+    {
+      "id": "contact-section",
+      "title": "Contact me",
+      "links": [
+        {
+          "id": "link-discord",
+          "title": "Discord",
+          "url": "https://discordapp.com/users/412231472968237066",
+          "displayUrl": "https://discordapp.com/users/412231472968237066",
+          "target": "_blank",
+          "type": "standard"
+        },
+        {
+          "id": "link-email-block",
+          "title": "Email",
+          "url": "",
+          "displayUrl": "faccclol123 [at] gmail.com",
+          "type": "email",
+          "emailUser": "faccclol123",
+          "emailHost": "gmail [at] com"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" class="is-loading">
+  <head>
+{{> head }}
+  </head>
+  <body class="posts-page"">
+{{> header }}
+
+    <main class="post-detail-container" style="min-height: 65vh; display: flex; align-items: flex-start; justify-content: center; text-align: center; padding: 7rem 1.5rem 5rem;">
+      <div style="max-width: 540px; margin: 0 auto;">
+        <div style="font-family: var(--posts-font, 'Plus Jakarta Sans', sans-serif); font-size: 6.5rem; font-weight: 800; line-height: 1; color: var(--posts-accent); margin-top: 2rem; margin-bottom: 1.25rem; letter-spacing: -0.04em;">
+          404
+        </div>
+        <h1 style="font-size: 1.85rem; font-weight: 800; color: #FFFFFF; margin-bottom: 0.85rem; letter-spacing: -0.02em;">
+          Page Not Found
+        </h1>
+        <p style="color: var(--posts-text-body); font-size: 1.05rem; line-height: 1.65; margin-bottom: 2.25rem;">
+          The page you are looking for doesn't exist, has been removed, or is temporarily unavailable.
+        </p>
+
+        <div style="display: flex; align-items: center; justify-content: center;">
+          <a href="{{ homeUrl }}" class="btn btn-subscribe" id="return-home-btn" style="text-decoration: none;">
+            <span>Return to Home</span>
+          </a>
+        </div>
+      </div>
+    </main>
+
+{{> footer }}
+
+    <script type="module" src="{{ scriptUrl }}"></script>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Tools</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/tools/tools.css" />
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="topbar-brand">Robo<span>Tools</span></div>
+      <nav>
+        <a href="/tools/" class="active">Overview</a>
+        <a href="/tools/projects.html">Projects</a>
+        <a href="/tools/badges.html">Badges</a>
+        <a href="/tools/links.html">Links</a>
+        <a href="/tools/posts.html">Posts</a>
+      </nav>
+      <div class="topbar-actions">
+        <a href="/" target="_blank" rel="noopener"><button type="button" class="ghost">View site ↗</button></a>
+        <button type="button" id="build-btn" class="primary">Build site</button>
+      </div>
+    </div>
+
+    <div class="layout single">
+      <div class="panel">
+        <div class="panel-head"><span class="panel-title">Content</span></div>
+        <div class="panel-body">
+          <div class="stat-row" id="stats">
+            <div><div class="stat-value" id="stat-projects">–</div><div class="stat-label">Projects</div></div>
+            <div><div class="stat-value" id="stat-posts">–</div><div class="stat-label">Posts</div></div>
+            <div><div class="stat-value" id="stat-badges">–</div><div class="stat-label">Badges</div></div>
+            <div><div class="stat-value" id="stat-links">–</div><div class="stat-label">Links</div></div>
+          </div>
+          <p class="hint">
+            Everything below edits files in <code>content/</code>. Press <strong>Build site</strong> to
+            regenerate <code>dist/</code> from that content plus <code>templates/</code>.
+          </p>
+        </div>
+      </div>
+
+      <div class="tool-cards" style="margin-top: 1.25rem;">
+        <a class="tool-card" href="/tools/projects.html">
+          <h3>Projects</h3>
+          <p>Edit project cards, pick tool badges, upload preview images.</p>
+        </a>
+        <a class="tool-card" href="/tools/badges.html">
+          <h3>Badges</h3>
+          <p>Manage the badge catalogue and see which projects use each one.</p>
+        </a>
+        <a class="tool-card" href="/tools/links.html">
+          <h3>Links</h3>
+          <p>Arrange the sections and entries on the links page.</p>
+        </a>
+        <a class="tool-card" href="/tools/posts.html">
+          <h3>Posts</h3>
+          <p>Write markdown posts with a live preview from the real renderer.</p>
+        </a>
+      </div>
+    </div>
+
+    <script type="module" src="/tools/js/overview.js"></script>
+  </body>
+</html>

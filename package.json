@@ -1,0 +1,16 @@
+{
+  "name": "robomarchello-website",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "node build.js",
+    "dev": "node tools/server.js",
+    "clean": "node -e \"fs.rmSync('dist',{recursive:true,force:true})\""
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "marked": "^18.0.12",
+    "prismjs": "^1.30.0"
+  }
+}
