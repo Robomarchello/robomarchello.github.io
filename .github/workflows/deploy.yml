@@ -40,16 +40,18 @@ jobs:
         env:
           CONFIGURED_BASE_PATH: ${{ steps.pages.outputs.base_path }}
         run: |
-          repository_name="${GITHUB_REPOSITORY#*/}"
-          # 1. If configure-pages returned a valid base path from GitHub settings, use it.
-          # 2. If a custom domain exists (CNAME / assets/CNAME) or it's a user/org site (<owner>.github.io), serve from root (/).
+          repo_name="${GITHUB_REPOSITORY#*/}"
+          repo_lower="$(echo "$repo_name" | tr '[:upper:]' '[:lower:]')"
+
+          # 1. User/organization pages (*.github.io) and custom domains (CNAME) ALWAYS serve from root (/).
+          # 2. If configure-pages returned a valid subpath for a project site, use it.
           # 3. Otherwise, project sites default to /<repo>/.
-          if [ -n "$CONFIGURED_BASE_PATH" ]; then
-            export BASE_PATH="$CONFIGURED_BASE_PATH"
-          elif [ -f assets/CNAME ] || [ -f CNAME ] || [ "$repository_name" = "${GITHUB_REPOSITORY_OWNER}.github.io" ]; then
+          if [ -f assets/CNAME ] || [ -f CNAME ] || [[ "$repo_lower" == *".github.io" ]]; then
             export BASE_PATH="/"
+          elif [ -n "$CONFIGURED_BASE_PATH" ]; then
+            export BASE_PATH="$CONFIGURED_BASE_PATH"
           else
-            export BASE_PATH="/$repository_name/"
+            export BASE_PATH="/$repo_name/"
           fi
 
           echo "Building static site with BASE_PATH=$BASE_PATH"
