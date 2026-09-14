@@ -18,42 +18,61 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout source code
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - name: Setup Node.js runtime
+        uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
 
-      - name: Resolve the Pages base path
+      - name: Configure GitHub Pages
+        id: pages
+        uses: actions/configure-pages@v5
+        continue-on-error: true
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Resolve base path & build static site
         shell: bash
+        env:
+          CONFIGURED_BASE_PATH: ${{ steps.pages.outputs.base_path }}
         run: |
           repository_name="${GITHUB_REPOSITORY#*/}"
-          # A custom domain (assets/CNAME) and user/org sites serve from /.
-          # Project sites without a custom domain serve from /<repo>/.
-          if [ -f assets/CNAME ] || [ "$repository_name" = "${GITHUB_REPOSITORY_OWNER}.github.io" ]; then
-            echo "BASE_PATH=/" >> "$GITHUB_ENV"
+          # 1. If configure-pages returned a valid base path from GitHub settings, use it.
+          # 2. If a custom domain exists (CNAME / assets/CNAME) or it's a user/org site (<owner>.github.io), serve from root (/).
+          # 3. Otherwise, project sites default to /<repo>/.
+          if [ -n "$CONFIGURED_BASE_PATH" ]; then
+            export BASE_PATH="$CONFIGURED_BASE_PATH"
+          elif [ -f assets/CNAME ] || [ -f CNAME ] || [ "$repository_name" = "${GITHUB_REPOSITORY_OWNER}.github.io" ]; then
+            export BASE_PATH="/"
           else
-            echo "BASE_PATH=/$repository_name/" >> "$GITHUB_ENV"
+            export BASE_PATH="/$repository_name/"
           fi
 
-      - run: npm ci
-      - run: npm run build
+          echo "Building static site with BASE_PATH=$BASE_PATH"
+          npm run build
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
+          # Ensure CNAME file is copied into dist/ if custom domain is defined
+          if [ -f assets/CNAME ] && [ ! -f dist/CNAME ]; then
+            cp assets/CNAME dist/CNAME
+          elif [ -f CNAME ] && [ ! -f dist/CNAME ]; then
+            cp CNAME dist/CNAME
+          fi
 
-      - name: Upload artifact
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist # Make sure this matches your build output folder (e.g., build, out, public)
+          path: dist
 
   deploy:
+    needs: build
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
     steps:
       - name: Deploy to GitHub Pages
         id: deployment

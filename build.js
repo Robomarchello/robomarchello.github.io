@@ -18,6 +18,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 import {
+  ROOT,
   ASSETS_DIR,
   DIST_DIR,
   SCRIPTS_DIR,
@@ -209,6 +210,13 @@ export function build({ quiet = false } = {}) {
 
   // Stops GitHub Pages from running the output through Jekyll
   writeFile('.nojekyll', '');
+
+  // Copy custom domain CNAME if present
+  if (fs.existsSync(path.join(ROOT, 'CNAME'))) {
+    fs.copyFileSync(path.join(ROOT, 'CNAME'), path.join(DIST_DIR, 'CNAME'));
+  } else if (fs.existsSync(path.join(ASSETS_DIR, 'CNAME'))) {
+    fs.copyFileSync(path.join(ASSETS_DIR, 'CNAME'), path.join(DIST_DIR, 'CNAME'));
+  }
 
   const summary = {
     pages: 6,
