@@ -22,17 +22,16 @@ Recently, I got accepted into [Lodz University of Technology](https://p.lodz.pl/
 
 ## Why this website and how
 
-I've owned this domain for about 1.5 years now. Back then, I was learning a bit of web development and Flask for a [personal website](https://youtu.be/osIiUCe_47s?si=dNgTa5naZ5PHrz-y&t=454) and a project called [AlgoTracker](https://youtu.be/osIiUCe_47s?si=VcW0LdndTLqTuEqd&t=454).
-
-But as time went by, I got busy with competitions and preparing for Ukrainian exams, so I never really got back to updating it. Here's how the old website looked:
+I've owned this domain for about 1.5 years now. Back then, I was learning a bit of web development and Flask for a [personal website](https://youtu.be/osIiUCe_47s?si=dNgTa5naZ5PHrz-y&t=454) and a project called [AlgoTracker](https://youtu.be/osIiUCe_47s?si=VcW0LdndTLqTuEqd&t=454). But as time went by, I got busy with competitions and preparing for Ukrainian exams, so I never really got back to updating it. Here's how the old website looked:
 ![old_website](/assets/posts/old_website.webp "Old version of the website (end of 2024)")
-It wasn't all that bad, but I wanted something more presentable. Once exams and other projects were out of the way, I decided to "vibe code" a fresh version while prepping for university math and physics. I'll be honest—this isn't how I normally like to work. I value having a deep understanding of what I build, plus learning C++ is currently my main priority. But since I desperately needed a working site, using AI felt like the right shortcut for this specific case.
+It wasn't all that bad for a first website, but I wanted something more presentable. Once exams and other projects were out of the way, I decided to vibe code a fresh version while prepping for university math and physics. Honestly, first time doing something like this, because I love to build myself and understand how everything works. But since I desperately needed a working site + learning C++ is currently my main priority, using AI is the right shortcut for this specific case imo.
+
 
 The tool I used was **Google AI Studio** because of its generous free tier limits. (I also have a 1-year student offer, but I'm saving that for later!)
 
 It will take really long to describe the whole process, but it was basically like this:
 1. Get inspiration, envision the design and structure.
-2. AI & me back and forth. I made probably around **>100 iterations** before getting to this result, and it's FAR from perfect
+2. AI & me back and forth. I made probably around **110-120 iterations**(yeah, I counted that) before getting to this result, and it's still FAR from perfect
 3. When finished with the design, I asked AI to create tools for me that would save DAYS of work inserting content on all the pages.
 4. Put the content on the page with those tools.
 5. Deploy on GitHub Pages
@@ -50,8 +49,7 @@ As mentioned above, I'm starting university and it will be my main focus. My mai
 
 Even though I'm not super experienced yet, I personally think that knowing how things work under the hood is really important. 
 
-Building this website doesn't really follow that philosophy, but it's a special case since I didn't have time to learn full web dev right now:)) However, the project taught me an important lesson: to prompt AI well for unique results, you still NEED a solid foundation in programming and UI understanding.
-Nothing works out on the first try, but overall, I'm happy with how much cleaner and cool the site looks compared to before.
+The project taught me that to prompt AI well for unique results, you still NEED a solid foundation in programming and UI understanding. Nothing works out on the first try, but overall, I'm happy with how much cleaner and cool the site looks compared to before.
 
 Managing this project became way more painful as it got bigger. So definitely having your own knowledge is very valuable, haha
 

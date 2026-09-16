@@ -227,18 +227,23 @@ nav a:hover {
 
 /* Facts Grid */
 .facts-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1.25rem;
   margin-bottom: 4rem;
 }
 
 .fact-card {
+  flex: 0 1 calc((100% - 2 * 1.25rem) / 3);
+  min-width: 260px;
+  min-height: 140px;
   padding: 1.8rem;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  box-sizing: border-box;
 }
 
 .fact-label {
@@ -861,7 +866,7 @@ footer {
 
 .link-block:hover,
 .link-block:focus-visible {
-  transform: translateY(-3px);
+  transform: scale(1.008) translateY(-1px);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.07);
   border-color: rgba(0, 0, 0, 0.16);
 }
@@ -884,6 +889,7 @@ footer {
 .link-block:hover .link-block-title,
 .link-block:focus-visible .link-block-title {
   color: var(--text-main);
+  transform: scale(1.008) translateY(-1px);
   text-decoration: underline;
   text-decoration-thickness: 1.5px;
   text-underline-offset: 3px;
@@ -922,7 +928,6 @@ footer {
 
 /* Don't move the icon near the link. Don't highlight it. */
 .link-block:hover .link-icon {
-  transform: none;
   color: var(--text-muted);
   opacity: 0.85;
 }

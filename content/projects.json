@@ -1,5 +1,23 @@
 [
   {
+    "id": "robomarchello-website",
+    "title": "robomarchello.dev",
+    "media": {
+      "src": "/assets/projects/robomarchello-website.webp",
+      "alt": "Screenshot of the \"RoboMarchello\" personal portfolio homepage, featuring a short intro by Mark."
+    },
+    "tools": [],
+    "description": "My personal website, home to my project showcase, links, and a blog where I write about what I'm building and learning. It uses a static site generator pipeline that builds the site automatically before deploying to Github Pages. ",
+    "links": [
+      {
+        "label": "How I built this website",
+        "url": "https://robomarchello.dev/posts/creation-of-this-website-plans-for-the-future.html",
+        "type": "external"
+      }
+    ],
+    "featured": false
+  },
+  {
     "id": "project-pixelsketch",
     "title": "PixelSketch",
     "media": {
