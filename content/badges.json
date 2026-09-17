@@ -64,5 +64,10 @@
     "name": "Flask",
     "category": "Custom",
     "icon": "/assets/icons/flask.webp"
+  },
+  "numpy": {
+    "name": "Numpy",
+    "category": "Custom",
+    "icon": "/assets/icons/numpy.webp"
   }
 }
