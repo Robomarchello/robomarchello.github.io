@@ -73,5 +73,67 @@
       }
     ],
     "featured": false
+  },
+  {
+    "id": "mediocre-game",
+    "title": "Mediocre Game with Golf Like Gameplay in Space!",
+    "media": {
+      "src": "/assets/projects/mediocre-game.webp",
+      "alt": ""
+    },
+    "tools": [
+      "python",
+      "pygamece"
+    ],
+    "description": "A physics-based space puzzle game. Launch the spaceship while avoiding physics objects to land on the planet. Features custom physics engine. Made during Pygame Community Summer Game Jam. The project was later refined and earned a silver medal at the INFOMATRIX 2025 international competition held in Romania.",
+    "links": [
+      {
+        "label": "Play in your browser!",
+        "url": "https://robomarchello.itch.io/mediocre-game-with-golf-like-gameplay-in-space",
+        "type": "external"
+      },
+      {
+        "label": "See source code",
+        "url": "https://github.com/Robomarchello/PGCSJ_2024",
+        "type": "github"
+      },
+      {
+        "label": "INFOMATRIX World Final",
+        "url": "https://youtu.be/IyR-14AZnpQ?si=V1A0s8Q1ZljJBxXU&t=18",
+        "type": "youtube"
+      },
+      {
+        "label": "Art by @PIXEL-V",
+        "url": "https://x.com/FingersTorn",
+        "type": "external"
+      }
+    ],
+    "featured": false
+  },
+  {
+    "id": "project-new-5",
+    "title": "LiquiPy",
+    "media": {
+      "src": "/assets/projects/new-5.webp",
+      "alt": ""
+    },
+    "tools": [
+      "python",
+      "pygamece"
+    ],
+    "description": "a tool for image mesh editing made using Python, pygame. Made for The Tool Jam 3.",
+    "links": [
+      {
+        "label": "Download it!",
+        "url": "https://robomarchello.itch.io/liquipy",
+        "type": "external"
+      },
+      {
+        "label": "See source code",
+        "url": "https://github.com/Robomarchello/liquiPy",
+        "type": "external"
+      }
+    ],
+    "featured": false
   }
 ]
