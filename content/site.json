@@ -4,7 +4,7 @@
   "url": "https://robomarchello.dev",
   "description": "Personal developer portfolio of Mark (RoboMarchello), a freshman at LUT passionate about game development, physics simulations, and clean code.",
   "blogDescription": "Personal blog of Mark (RoboMarchello). Deep dives into game physics, software architecture, hardware builds, and clean code.",
-  "copyright": "© Robomarchello 2026. All Rights Reserved.",
+  "copyright": "By Robomarchello © 2026",
   "nav": [
     { "label": "home", "href": "/" },
     { "label": "projects", "href": "/projects.html" },
