@@ -880,7 +880,7 @@ footer {
 
 .link-block:hover,
 .link-block:focus-visible {
-  transform: scale(1.008) translateY(-1px);
+  transform: scale(1.008);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.07);
   border-color: rgba(0, 0, 0, 0.16);
 }
@@ -1094,7 +1094,6 @@ footer {
   }
 
   footer {
-    flex-direction: column-reverse;
     text-align: center;
   }
 

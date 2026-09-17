@@ -1095,7 +1095,6 @@ body.posts-page .social-icon:hover {
 @media (max-width: 768px) {
   body.posts-page footer,
   body.posts-page #site-footer {
-    flex-direction: column-reverse;
     text-align: center;
     gap: 1.25rem;
     padding: 2rem 1.25rem;
