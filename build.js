@@ -60,11 +60,13 @@ function copyDir(from, to) {
  * the dark (blog) chrome.
  */
 function baseContext(site, { scheme = 'light', activeHref = '', script, title, description, ogType = 'website' }) {
+  const favicon = site.favicon || '/assets/favicon.svg';
   return {
     site,
     pageTitle: title,
     pageDescription: description || site.description,
     ogType,
+    faviconUrl: url(favicon),
     nav: renderNav(site, activeHref),
     socials: renderSocials(site),
     themeBootstrap: renderThemeBootstrap(scheme),
@@ -210,6 +212,14 @@ export function build({ quiet = false } = {}) {
 
   // Stops GitHub Pages from running the output through Jekyll
   writeFile('.nojekyll', '');
+
+  // Copy root-level favicon for direct browser requests (/favicon.svg, /favicon.ico)
+  if (fs.existsSync(path.join(ASSETS_DIR, 'favicon.svg'))) {
+    fs.copyFileSync(path.join(ASSETS_DIR, 'favicon.svg'), path.join(DIST_DIR, 'favicon.svg'));
+  }
+  if (fs.existsSync(path.join(ASSETS_DIR, 'favicon.ico'))) {
+    fs.copyFileSync(path.join(ASSETS_DIR, 'favicon.ico'), path.join(DIST_DIR, 'favicon.ico'));
+  }
 
   // Copy custom domain CNAME if present
   if (fs.existsSync(path.join(ROOT, 'CNAME'))) {
